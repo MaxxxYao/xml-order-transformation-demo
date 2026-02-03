@@ -1,0 +1,87 @@
+<Order>
+  <Header>
+    <OrderNumber>PO-100045</OrderNumber>
+    <Buyer>ACME UK</Buyer>
+    <OrderDate>2026-01-31</OrderDate>
+    <Currency>GBP</Currency>
+    <ShipTo>
+      <Name>ACME Warehouse</Name>
+      <City>London</City>
+      <Postcode>SE1 2AB</Postcode>
+      <Country>GB</Country>
+    </ShipTo>
+    <Notes>Handle with care. Deliver before 5pm.</Notes>
+  </Header>
+
+  <Lines>
+    <!-- normal line -->
+    <Line>
+      <LineNo>1</LineNo>
+      <SKU>APPLE-001</SKU>
+      <Description>Gala Apples 1kg</Description>
+      <Qty>10</Qty>
+      <UnitPrice>2.50</UnitPrice>
+      <UOM>EA</UOM>
+    </Line>
+
+    <!-- normal line -->
+    <Line>
+      <LineNo>2</LineNo>
+      <SKU>BANANA-002</SKU>
+      <Description>Bananas (ripe)</Description>
+      <Qty>5</Qty>
+      <UnitPrice>1.20</UnitPrice>
+      <UOM>EA</UOM>
+    </Line>
+
+    <!-- large qty  -->
+    <Line>
+      <LineNo>3</LineNo>
+      <SKU>MILK-010</SKU>
+      <Description>Whole Milk 2L</Description>
+      <Qty>48</Qty>
+      <UnitPrice>1.55</UnitPrice>
+      <UOM>EA</UOM>
+    </Line>
+
+    <!-- suspicious: qty is 0 -->
+    <Line>
+      <LineNo>4</LineNo>
+      <SKU>EGG-006</SKU>
+      <Description>Eggs (6 pack)</Description>
+      <Qty>0</Qty>
+      <UnitPrice>1.80</UnitPrice>
+      <UOM>EA</UOM>
+    </Line>
+
+    <!-- suspicious: negative price -->
+    <Line>
+      <LineNo>5</LineNo>
+      <SKU>DISCOUNT-001</SKU>
+      <Description>Manual discount</Description>
+      <Qty>1</Qty>
+      <UnitPrice>-0.50</UnitPrice>
+      <UOM>EA</UOM>
+    </Line>
+
+    <!-- missing-ish: empty SKU -->
+    <Line>
+      <LineNo>6</LineNo>
+      <SKU></SKU>
+      <Description>Unknown item</Description>
+      <Qty>2</Qty>
+      <UnitPrice>3.00</UnitPrice>
+      <UOM>EA</UOM>
+    </Line>
+
+    <!-- duplicate line_no -->
+    <Line>
+      <LineNo>2</LineNo>
+      <SKU>BANANA-002</SKU>
+      <Description>Bananas (duplicate line)</Description>
+      <Qty>5</Qty>
+      <UnitPrice>1.20</UnitPrice>
+      <UOM>EA</UOM>
+    </Line>
+  </Lines>
+</Order>
